@@ -25,11 +25,11 @@ public class Triangle {
         calculatePerimetr();
         calculateSquare();
     }
-    /** Получает периметр треугольника*/
+    /** РџРѕР»СѓС‡Р°РµС‚ РїРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°*/
     private void calculatePerimetr() {
         perimeter = firstSide + secondSide + thirdSide;
     }
-    /** Получает площадь треугольника */
+    /** РџРѕР»СѓС‡Р°РµС‚ РїР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° */
     private void calculateSquare() {
         square = Math.sqrt(perimeter * (perimeter - firstSide) * (perimeter - secondSide) * (perimeter - thirdSide));
     }
