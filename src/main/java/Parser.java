@@ -54,8 +54,9 @@ public class Parser {
             for (i = 0; i < 3; i++) {
                 side[i] =  Double.parseDouble(parts[i]);
             }
-            if (i < 3)
-                throw new IncorrectDataException();
+            if (i != 3) {
+               throw new IncorrectDataException();
+            }
             listTriangles.add(new Triangle(side[0], side[1], side[2]));
         }
         return listTriangles;
