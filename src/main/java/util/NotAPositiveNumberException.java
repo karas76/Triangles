@@ -5,7 +5,7 @@ package util;
  * Группа: ИВТ-42БО.
  */
 public class NotAPositiveNumberException extends Exception {
-    /** String with error message. */
+    /** String with error message.*/
     private static final String ERROR_MESSAGE = "Должно быть положительное значение всех чисел";
 
     /**
