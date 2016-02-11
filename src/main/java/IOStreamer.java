@@ -1,7 +1,6 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,20 +8,28 @@ import java.util.Scanner;
  * Created by Roman on 19.10.2015.
  */
 public class IOStreamer {
-    /** Получает список строк из файла */
-    /**
+    /** Получает список строк из файла
      *
      * @param fileName Имя входного файла
      * @return
      * @throws Exception
      */
     public static List<String> inFile(String fileName) throws Exception {
-        List<String> listString = new ArrayList();
-        Scanner scanner = new Scanner(new File(fileName));
-        while (scanner.hasNextLine()) {
-            listString.add(scanner.nextLine());
+        String string = "";
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        StringBuilder sb = new StringBuilder();
+        String line = br.readLine();
+        if (line.isEmpty()){
+            //throw new InputException();
         }
-        return listString;
+        while (line != null) {
+            sb.append(line);
+            sb.append(System.lineSeparator());
+            line = br.readLine();
+        }
+        string = sb.toString();
+        br.close();
+        return Arrays.asList(string.split(System.lineSeparator()));
     }
     /** Записывает стороны и площади треугольников в файл */
     /**
