@@ -1,13 +1,13 @@
 package util;
 
 /**
- * @author пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
- * пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅ-42пїЅпїЅ.
+ * @author Карасев Роман.
+ * Группа: ИВТ-42БО.
  */
 public class IncorrectDataException extends Exception{
 
         /** String with error message. */
-        private static final String ERROR_MESSAGE = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ";
+        private static final String ERROR_MESSAGE = "Некорректное количество чисел";
 
         /**
          * Default constructor.
