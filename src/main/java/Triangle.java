@@ -22,11 +22,11 @@ public class Triangle {
 
     Triangle(double firstSide, double secondSide, double thirdSide) {
         fillTriangle(firstSide, secondSide, thirdSide);
-        calculatePerimetr();
+        calculatePerimeter();
         calculateSquare();
     }
     /** Получает периметр треугольника*/
-    private void calculatePerimetr() {
+    private void calculatePerimeter() {
         perimeter = firstSide + secondSide + thirdSide;
     }
     /** Получает площадь треугольника */
