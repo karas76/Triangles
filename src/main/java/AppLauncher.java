@@ -28,7 +28,7 @@ public class AppLauncher {
             }
         }
     }
-    /** Задан входной и выходной файл*/
+    /** Р—Р°РґР°РЅ РІС…РѕРґРЅРѕР№ Рё РІС‹С…РѕРґРЅРѕР№ С„Р°Р№Р»*/
    AppLauncher(String inputFile, String outputFile) throws Exception{
        Parser parser = new Parser(IOStreamer.inFile(inputFile));
        listTriangles = parser.getListTriangles();
@@ -36,7 +36,7 @@ public class AppLauncher {
        IOStreamer.printToFile(outputFile, listTriangles);
     }
 
-    /** Задан входной файл*/
+    /** Р—Р°РґР°РЅ РІС…РѕРґРЅРѕР№ С„Р°Р№Р»*/
     AppLauncher(String inputFile) throws Exception{
             Parser parser = new Parser(IOStreamer.inFile(inputFile));
             listTriangles = parser.getListTriangles();
