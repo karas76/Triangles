@@ -9,10 +9,10 @@ import java.util.Scanner;
  * Created by Roman on 19.10.2015.
  */
 public class IOStreamer {
-    /** Получает список строк из файла */
+    /** РџРѕР»СѓС‡Р°РµС‚ СЃРїРёСЃРѕРє СЃС‚СЂРѕРє РёР· С„Р°Р№Р»Р° */
     /**
      *
-     * @param fileName Имя входного файла
+     * @param fileName РРјСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°
      * @return
      * @throws Exception
      */
@@ -24,10 +24,10 @@ public class IOStreamer {
         }
         return listString;
     }
-    /** Записывает стороны и площади треугольников в файл */
+    /** Р—Р°РїРёСЃС‹РІР°РµС‚ СЃС‚РѕСЂРѕРЅС‹ Рё РїР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ РІ С„Р°Р№Р» */
     /**
      *
-     * @param triangles Список треугольников
+     * @param triangles РЎРїРёСЃРѕРє С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
      * @param printWriter
      * @throws Exception
      */
@@ -36,10 +36,10 @@ public class IOStreamer {
             printWriter.println("Sides: " + triangle.getFirstSide() + " " + triangle.getSecondSide() + " " + triangle.getThirdSide() + " " + " Square = " + triangle.getSquare());
         }
     }
-    /** Записывает результат в файл*/
+    /** Р—Р°РїРёСЃС‹РІР°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІ С„Р°Р№Р»*/
     /**
      *
-     * @param filename Имя файла результатов
+     * @param filename РРјСЏ С„Р°Р№Р»Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
      * @param triangle
      * @throws Exception
      */
@@ -49,10 +49,10 @@ public class IOStreamer {
         printWriter.close();
 
     }
-    /** Записывает результат в консоль*/
+    /** Р—Р°РїРёСЃС‹РІР°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІ РєРѕРЅСЃРѕР»СЊ*/
     /**
      *
-     * @param triangle Список треугольников
+     * @param triangle РЎРїРёСЃРѕРє С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ
      * @throws Exception
      */
     public static void printToConsole(List<Triangle> triangle) throws Exception{
