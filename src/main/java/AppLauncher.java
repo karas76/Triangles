@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
@@ -20,12 +19,7 @@ public class AppLauncher {
                     return;
             }
         }catch (Exception e) {
-            if (e instanceof  NumberFormatException) {
-                catchNumberFormatException((NumberFormatException) e);
-            }
-            if (e instanceof NullPointerException){
-                catchNullPointerException();
-            }
+            handleExceptions(e);
         }
     }
     /** Задан входной и выходной файл*/
@@ -49,19 +43,9 @@ public class AppLauncher {
                 "Если имя результирующего файла не указано, то результат запишется в консоль.");
     }
 
-    /** String with wrong input file error message. */
-    public static final String WRONG_INPUT_FILE = "Wrong format of the input file.";
-
-    private static void catchNumberFormatException(NumberFormatException e) {
+    private static void handleExceptions(Exception e) {
         System.out.println(e.getMessage());
-        System.out.println(WRONG_INPUT_FILE);
         AppLauncher.printHelp();
         System.exit(0);
     }
-    private static void catchNullPointerException() {
-        System.out.println(WRONG_INPUT_FILE);
-        AppLauncher.printHelp();
-        System.exit(0);
-    }
-
 }

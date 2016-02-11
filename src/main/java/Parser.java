@@ -1,5 +1,5 @@
 import java.util.*;
-
+import util.*;
 public class Parser {
     private List<Triangle> listTriangles = new ArrayList<Triangle>();
 
@@ -28,13 +28,12 @@ public class Parser {
      * @throws Exception
      */
     public static int getSumTr(List<String> list) throws Exception{
-        int k = 0;
-        String parts[];
-        String string;
-            string = list.get(0);
-            parts = string.split(" ");
-            k = Integer.parseInt(parts[0]);
-        return k;
+        int amount = Integer.valueOf(list.get(0).trim().replace("\\s+", " "));
+        if (amount > 0){
+            return amount;
+        }else{
+            throw new NotAPositiveNumberException();
+        }
     }
     /** Получет список треугольников из файла. */
     /**
@@ -51,9 +50,12 @@ public class Parser {
         for (int j = 1; j < amount + 1; j++) {
             string = list.get(j);
             parts = string.split("\\s+");
-            for (int i = 0; i < 3; i++) {
+            int i;
+            for (i = 0; i < 3; i++) {
                 side[i] =  Double.parseDouble(parts[i]);
             }
+            if (i < 3)
+                throw new IncorrectDataException();
             listTriangles.add(new Triangle(side[0], side[1], side[2]));
         }
         return listTriangles;

@@ -1,3 +1,5 @@
+import util.IncorrectDataException;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +22,7 @@ public class IOStreamer {
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         if (line.isEmpty()){
-            //throw new InputException();
+            throw new IncorrectDataException();
         }
         while (line != null) {
             sb.append(line);
