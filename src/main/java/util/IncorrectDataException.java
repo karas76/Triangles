@@ -7,7 +7,7 @@ package util;
 public class IncorrectDataException extends Exception{
 
         /** String with error message. */
-        private static final String ERROR_MESSAGE = "Некорректное количество чисел";
+        private static final String ERROR_MESSAGE = "sample";
 
         /**
          * Default constructor.
