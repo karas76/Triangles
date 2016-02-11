@@ -44,7 +44,8 @@ public class AppLauncher {
             IOStreamer.printToConsole(listTriangles);
     }
     public static void printHelp(){
-        System.out.print("������");
+        System.out.print("������");
+        System.out.print("Пример русского текста");
     }
 
     /** String with wrong input file error message. */
