@@ -32,10 +32,10 @@ public class AppLauncher {
 
     /** Задан входной файл*/
     AppLauncher(String inputFile) throws Exception{
-            Parser parser = new Parser(IOStreamer.inFile(inputFile));
-            listTriangles = parser.getListTriangles();
-         WorkWithTriangles.sortTriangles(listTriangles);;
-            IOStreamer.printToConsole(listTriangles);
+        Parser parser = new Parser(IOStreamer.inFile(inputFile));
+        listTriangles = parser.getListTriangles();
+        WorkWithTriangles.sortTriangles(listTriangles);;
+        IOStreamer.printToConsole(listTriangles);
     }
     public static void printHelp(){
         System.out.print("============Помощь============\n  Программа считывает список треугольников и выдаёт их площади по возрастанию. " +

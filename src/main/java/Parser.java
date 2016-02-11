@@ -17,8 +17,6 @@ public class Parser {
     Parser(List<String> buffer) throws Exception{
             amountTriangles = getSumTr(buffer);
             listTriangles = calculateListTr(buffer, amountTriangles);
-
-
     }
     /** Получает количество треульников из файла. */
     /**
