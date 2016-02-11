@@ -44,8 +44,7 @@ public class AppLauncher {
             IOStreamer.printToConsole(listTriangles);
     }
     public static void printHelp(){
-        System.out.print("������");
-        System.out.print("Пример русского текста");
+        System.out.print("============Помощь============\n  Программа считывает список треугольников и выдаёт их площади по возрастанию. В качестве параметров подаётся имя входного файла и результирующего файла. Если имя результирующего файла не указано, то результат запишется в консоль.");
     }
 
     /** String with wrong input file error message. */
