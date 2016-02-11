@@ -1,7 +1,7 @@
 import java.util.*;
 import util.*;
 public class Parser {
-    private List<Triangle> listTriangles = new ArrayList<Triangle>();
+    private List<Triangle> listTriangles = new ArrayList<>();
 
     public int getAmountTriangles() {
         return amountTriangles;
@@ -17,8 +17,6 @@ public class Parser {
     Parser(List<String> buffer) throws Exception{
             amountTriangles = getSumTr(buffer);
             listTriangles = calculateListTr(buffer, amountTriangles);
-
-
     }
     /** Получает количество треульников из файла. */
     /**
@@ -46,16 +44,18 @@ public class Parser {
         String parts[];
         String string;
         double side[] = new double[3];
-        List<Triangle> listTriangles = new ArrayList<Triangle>();
+        List<Triangle> listTriangles = new ArrayList<>();
+        if (list.size() != amount + 1) {
+            throw new IncorrectDataException();
+        }
         for (int j = 1; j < amount + 1; j++) {
             string = list.get(j);
             parts = string.split("\\s+");
-            int i;
-            for (i = 0; i < 3; i++) {
-                side[i] =  Double.parseDouble(parts[i]);
+            if (parts.length != 3) {
+                throw new IncorrectDataException();
             }
-            if (i != 3) {
-               throw new IncorrectDataException();
+            for (int i = 0; i < 3; i++) {
+                side[i] =  Double.parseDouble(parts[i]);
             }
             listTriangles.add(new Triangle(side[0], side[1], side[2]));
         }
