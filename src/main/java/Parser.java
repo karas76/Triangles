@@ -25,7 +25,7 @@ public class Parser {
      * @return
      * @throws Exception
      */
-    public static int getSumTr(List<String> list) throws Exception{
+    public int getSumTr(List<String> list) throws Exception{
         int amount = Integer.valueOf(list.get(0).trim().replace("\\s+", " "));
         if (amount > 0){
             return amount;
@@ -40,17 +40,18 @@ public class Parser {
      * @param amount количество треугольников
      * @return
      */
-    public static List<Triangle> calculateListTr(List<String> list, int amount) throws Exception{
+    public List<Triangle> calculateListTr(List<String> list, int amount) throws Exception{
         String parts[];
-        String string;
+        String str;
         double side[] = new double[3];
         List<Triangle> listTriangles = new ArrayList<>();
         if (list.size() != amount + 1) {
             throw new IncorrectDataException();
         }
         for (int j = 1; j < amount + 1; j++) {
-            string = list.get(j);
-            parts = string.split("\\s+");
+            str = list.get(j);
+            str = removeExtraSpaces(str);
+            parts = str.split("\\s+");
             if (parts.length != 3) {
                 throw new IncorrectDataException();
             }
@@ -61,5 +62,14 @@ public class Parser {
         }
         return listTriangles;
     }
-
+    /**
+     * Remove extra spaces
+     * from source string
+     */
+    private String removeExtraSpaces(String line){
+        StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(line.trim().replaceAll("\\s+", " "));
+            stringBuilder.append(System.lineSeparator());
+        return stringBuilder.toString();
+    }
 }
