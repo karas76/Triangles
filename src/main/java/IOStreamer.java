@@ -58,6 +58,7 @@ public class IOStreamer {
         printWriter.close();
 
     }
+
     /** Записывает результат в консоль*/
     /**
      *

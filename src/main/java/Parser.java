@@ -11,6 +11,7 @@ public class Parser {
 
         return listTriangles;
     }
+    private List<String> source;
 
     int amountTriangles;
 
@@ -18,7 +19,7 @@ public class Parser {
             amountTriangles = getSumTr(buffer);
             listTriangles = calculateListTr(buffer, amountTriangles);
     }
-    /** Получает количество треульников из файла. */
+    /** Получает количество треульников из файла.
     /**
      *
      * @param list список строк.
@@ -33,7 +34,7 @@ public class Parser {
             throw new NotAPositiveNumberException();
         }
     }
-    /** Получет список треугольников из файла. */
+    /** Получет список треугольников из файла.
     /**
      * Получет список треугольников из файла.
      * @param list список строк.
@@ -62,10 +63,17 @@ public class Parser {
         }
         return listTriangles;
     }
+    public void ex(){
+        for(Triangle tr : listTriangles ){
+            tr.getThirdSide();
+        }
+
+    }
     /**
      * Remove extra spaces
      * from source string
      */
+
     private String removeExtraSpaces(String line){
         StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append(line.trim().replaceAll("\\s+", " "));
