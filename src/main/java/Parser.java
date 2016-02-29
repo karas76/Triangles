@@ -4,13 +4,16 @@ public class Parser {
     private List<Triangle> listTriangles = new ArrayList<>();
 
     /**
-     * Геттер
-     * @return количество треугольников, указанное в файле
+     * Геттеры
+     * @return Количество треугольников, указанное в файле
      */
     public int getAmountTriangles() {
         return amountTriangles;
     }
 
+    /**
+     * @return Список треугольников
+     */
     public List<Triangle> getListTriangles() {
 
         return listTriangles;

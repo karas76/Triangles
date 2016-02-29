@@ -13,7 +13,7 @@ public class IOStreamer {
     /**
      * Получает список строк из файла
      * @param fileName Имя входного файла
-     * @return
+     * @return Список строк
      * @throws Exception
      */
     public static List<String> inFile(String fileName) throws Exception {
@@ -37,7 +37,7 @@ public class IOStreamer {
     /**
      * Записывает стороны и площади треугольников в файл
      * @param triangles Список треугольников
-     * @param printWriter
+     * @param printWriter Указатель на область вывода
      * @throws Exception
      */
     public static void printInfoAboutTriangles(List<Triangle> triangles, PrintWriter printWriter) throws Exception {
@@ -49,7 +49,7 @@ public class IOStreamer {
     /**
      * Записывает результат в файл
      * @param filename Имя файла результатов
-     * @param triangle
+     * @param triangle список треугольников
      * @throws Exception
      */
     public static void printToFile(String filename, List<Triangle> triangle) throws Exception{
