@@ -35,7 +35,7 @@ public class ParserTests {
     }*/
     @Test
     public void TestGetSumTr() {
-        int ex = 6;
+        int ex = 5;
         Assert.assertSame("Не равны", ex, parser.getAmountTriangles());
 
     }
