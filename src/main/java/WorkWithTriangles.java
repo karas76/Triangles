@@ -3,7 +3,9 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by Roman on 15.12.2015.
+ * Описание класса: Сортирует список треугольников
+ * @author Карасев Роман
+ * Группа: ИВТ-42БО
  */
 /** Сортирует треугольники по площади*/
 public class WorkWithTriangles {

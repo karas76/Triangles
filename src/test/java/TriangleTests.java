@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Roman on 12.02.2016.
+ * Описание класса: Тест для класса Triangle
+ * @author Карасев Роман.
+ * Группа: ИВТ-42БО.
  */
 public class TriangleTests {
     /** Объект треугольник*/

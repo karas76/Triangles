@@ -1,8 +1,10 @@
 package util;
 
-/**
- * Created by Roman on 12.02.2016.
- */
+        /**
+        * Описание класса: Информация об ошибке, когда треугольник не может существовать
+        * @author Карасев Роман
+        * Группа: ИВТ-42БО
+        */
 public class IncorrectTriangleException extends Exception {
         /** Строка с сообщением об ошибке*/
         private static final String ERROR_MESSAGE = "Некорректный треугольник";

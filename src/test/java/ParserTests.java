@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Roman on 11.02.2016.
+ * Описание класса: тест для класса Parser
+ * @author Карасев Роман.
+ * Группа: ИВТ-42БО.
  */
 public class ParserTests {
     /** Объект парсер*/

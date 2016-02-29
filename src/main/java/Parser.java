@@ -1,5 +1,13 @@
 import java.util.*;
 import util.*;
+
+/**
+ * Описание класса: Считывает количетво треугольников из входного файла,
+ *                  получает список треугольников.
+ * @author Карасев Роман
+ * Группа: ИВТ-42БО
+ */
+
 public class Parser {
     private List<Triangle> listTriangles = new ArrayList<>();
 
