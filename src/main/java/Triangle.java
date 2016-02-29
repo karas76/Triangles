@@ -1,9 +1,7 @@
 import util.IncorrectTriangleException;
 
 public class Triangle {
-    /**
-     * Геттеры.
-     */
+    /** Геттеры*/
     public double getFirstSide() {
         return firstSide;
     }
@@ -30,10 +28,10 @@ public class Triangle {
     private double square;
 
     /**
-     *
-     * @param firstSide
-     * @param secondSide
-     * @param thirdSide
+     * Конструктор
+     * @param firstSide Первая сторона
+     * @param secondSide Вторая сторона
+     * @param thirdSide Третья сторона
      * @throws Exception
      */
     Triangle(double firstSide, double secondSide, double thirdSide) throws Exception{
@@ -44,10 +42,10 @@ public class Triangle {
     }
 
     /**
-     *
-     * @param firstSide
-     * @param secondSide
-     * @param thirdSide
+     * Проверяет праильность сторон треугольника
+     * @param firstSide Первая сторона
+     * @param secondSide Вторая сторона
+     * @param thirdSide Третья сторона
      * @throws Exception
      */
     private void checkCorrect(double firstSide, double secondSide, double thirdSide) throws Exception{
@@ -62,11 +60,11 @@ public class Triangle {
     private void calculatePerimeter() {
         perimeter = firstSide + secondSide + thirdSide;
     }
-    /** Получает площадь треугольника */
+    /** Получает площадь треугольника*/
     private void calculateSquare() {
         square = Math.sqrt(perimeter/2 * (perimeter/2 - firstSide) * (perimeter/2 - secondSide) * (perimeter/2 - thirdSide));
     }
-    /** */
+    /** Заполняет треугольники*/
     private void fillTriangle(double firstSide, double secondSide, double thirdSide){
         this.firstSide = firstSide;
         this.secondSide = secondSide;

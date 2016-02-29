@@ -3,6 +3,10 @@ import util.*;
 public class Parser {
     private List<Triangle> listTriangles = new ArrayList<>();
 
+    /**
+     * Геттер
+     * @return количество треугольников, указанное в файле
+     */
     public int getAmountTriangles() {
         return amountTriangles;
     }
@@ -11,19 +15,23 @@ public class Parser {
 
         return listTriangles;
     }
-    private List<String> source;
 
     int amountTriangles;
 
+    /**
+     * Конструктор
+     * @param buffer
+     * @throws Exception
+     */
     Parser(List<String> buffer) throws Exception{
             amountTriangles = getSumTr(buffer);
             listTriangles = calculateListTr(buffer, amountTriangles);
     }
-    /** Получает количество треульников из файла.
+
     /**
-     *
+     * Получает количество треульников из файла
      * @param list список строк.
-     * @return
+     * @return Количество треугольников
      * @throws Exception
      */
     public int getSumTr(List<String> list) throws Exception{
@@ -34,12 +42,12 @@ public class Parser {
             throw new NotAPositiveNumberException();
         }
     }
-    /** Получет список треугольников из файла.
+
     /**
-     * Получет список треугольников из файла.
-     * @param list список строк.
+     * Получет список треугольников из файла
+     * @param list список строк
      * @param amount количество треугольников
-     * @return
+     * @return Список треугольников
      */
     public List<Triangle> calculateListTr(List<String> list, int amount) throws Exception{
         String parts[];
@@ -63,9 +71,11 @@ public class Parser {
         }
         return listTriangles;
     }
+
     /**
-     * Remove extra spaces
-     * from source string
+     * Удаляет лишние пробелы из строки
+     * @param line Строка
+     * @return Строка без лишних пробелов
      */
 
     private String removeExtraSpaces(String line){

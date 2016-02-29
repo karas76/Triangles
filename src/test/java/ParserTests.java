@@ -9,23 +9,23 @@ import java.util.List;
  * Created by Roman on 11.02.2016.
  */
 public class ParserTests {
-    /** Parser object. */
+    /** Объект парсер*/
     Parser parser;
 
-    /**
-     * Setting up unit tests.
-     */
+    /** Настройки тестов*/
     @Before
     public void setUp() throws Exception{
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
     }
 
+    /** Тест получения количества треугольников*/
     @Test
     public void TestGetSumTr() {
         int ex = 5;
         Assert.assertSame("Not equal", ex, parser.getAmountTriangles());
 
     }
+    /** Тест получения списка треугольников*/
     @Test
     public void testCalculateTriangles() throws Exception {
         Assert.assertFalse("Wrong list triangles", isListTrianglesNotCorrect());

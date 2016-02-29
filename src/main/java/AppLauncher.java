@@ -1,17 +1,21 @@
 import java.util.*;
 
 /**
- * Created by Roman on 10.10.2015.
+ * Имя проекта: Треугольники на плоскости
+ * Описание: Программа считывает данные из входного файла
+ *                       создаёт список треугольников и считает
+ *                       их площадь и периметр
+ *                       и записывает результат в файл или консоль.
+ * @author Карасев Роман
+ * Group: ИВТ-42БО
  */
 public class AppLauncher {
-    /**
-     *
-     */
+    /** Создаёт пустой список треугольников*/
     private List<Triangle> listTriangles = new ArrayList<Triangle>();
 
     /**
-     *
-     * @param args
+     * Считывает имя входного и выходного файла, в случае ошибки показывает инструкцию
+     * @param args строки с именами файлов
      * @throws Exception
      */
     public static void main(String args[]) throws Exception {
@@ -47,9 +51,7 @@ public class AppLauncher {
         IOStreamer.printToConsole(listTriangles);
     }
 
-    /**
-     *
-     */
+    /** Показывает инструкцию*/
     public static void printHelp(){
         System.out.print("============Помощь============\n  Программа считывает список треугольников и выдаёт их площади по возрастанию. " +
                 "В качестве параметров подаётся имя входного файла и результирующего файла. " +
@@ -58,6 +60,10 @@ public class AppLauncher {
                 " длины сторон.");
     }
 
+    /**
+     * Показывает ошибку, вызывает инструкцию, прекращает работу программы
+     * @param e
+     */
     private static void handleExceptions(Exception e) {
         System.out.println(e.getMessage());
         AppLauncher.printHelp();

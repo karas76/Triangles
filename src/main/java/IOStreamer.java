@@ -10,8 +10,8 @@ import java.util.Scanner;
  * Created by Roman on 19.10.2015.
  */
 public class IOStreamer {
-    /** Получает список строк из файла
-     *
+    /**
+     * Получает список строк из файла
      * @param fileName Имя входного файла
      * @return
      * @throws Exception
@@ -33,9 +33,9 @@ public class IOStreamer {
         br.close();
         return Arrays.asList(string.split(System.lineSeparator()));
     }
-    /** Записывает стороны и площади треугольников в файл */
+
     /**
-     *
+     * Записывает стороны и площади треугольников в файл
      * @param triangles Список треугольников
      * @param printWriter
      * @throws Exception
@@ -45,9 +45,9 @@ public class IOStreamer {
             printWriter.println("Sides: " + triangle.getFirstSide() + " " + triangle.getSecondSide() + " " + triangle.getThirdSide() + " " + " Square = " + triangle.getSquare());
         }
     }
-    /** Записывает результат в файл*/
+
     /**
-     *
+     * Записывает результат в файл
      * @param filename Имя файла результатов
      * @param triangle
      * @throws Exception
@@ -59,9 +59,8 @@ public class IOStreamer {
 
     }
 
-    /** Записывает результат в консоль*/
     /**
-     *
+     * Записывает результат в консоль
      * @param triangle Список треугольников
      * @throws Exception
      */

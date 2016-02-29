@@ -6,13 +6,10 @@ package util;
  */
 public class IncorrectDataException extends Exception{
 
-        /** String with error message. */
+        /** Строка с сообщением об ошибке*/
         private static final String ERROR_MESSAGE = "sample";
 
-        /**
-         * Default constructor.
-         * Sets exception message.
-         */
+        /** Вызывает сообщение об ошибке*/
         public IncorrectDataException(){
             super(ERROR_MESSAGE);
         }

@@ -5,13 +5,10 @@ package util;
  * Группа: ИВТ-42БО.
  */
 public class NotAPositiveNumberException extends Exception {
-    /** String with error message.*/
+    /** Строка с сообщением об ошибке*/
     private static final String ERROR_MESSAGE = "Должно быть положительное значение всех чисел";
 
-    /**
-     * Default constructor.
-     * Sets exception message.
-     */
+    /** Вызывает сообщение об ошибке*/
     public NotAPositiveNumberException(){
         super(ERROR_MESSAGE);
     }

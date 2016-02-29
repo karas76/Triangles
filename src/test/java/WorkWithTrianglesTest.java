@@ -5,19 +5,18 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Roman on 28.02.2016.
- */
-public class WorkWithTrianglesTest {
-    Parser parser;
 
+public class WorkWithTrianglesTest {
+    /**Объект парсер*/
+    Parser parser;
+    /** Настройки тестов*/
     @Before
     public void setUp() throws Exception {
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
     }
 
     /**
-     *
+     * Тест сортировки треугольников по площади
      * @throws Exception
      */
     @Test

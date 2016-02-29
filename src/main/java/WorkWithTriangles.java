@@ -8,8 +8,8 @@ import java.util.List;
 /** Сортирует треугольники по площади*/
 public class WorkWithTriangles {
     /**
-     *
-     * @param triangles
+     * Сортирует список треугольников по площади
+     * @param triangles Список треугольников
      */
     public static void sortTriangles(List<Triangle> triangles) {
        Collections.sort(triangles, (Triangle a, Triangle b) -> a.getSquare().compareTo(b.getSquare()));
