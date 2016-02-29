@@ -4,7 +4,16 @@ import java.util.*;
  * Created by Roman on 10.10.2015.
  */
 public class AppLauncher {
+    /**
+     *
+     */
     private List<Triangle> listTriangles = new ArrayList<Triangle>();
+
+    /**
+     *
+     * @param args
+     * @throws Exception
+     */
     public static void main(String args[]) throws Exception {
         try {
             switch (args.length) {
@@ -37,6 +46,10 @@ public class AppLauncher {
         WorkWithTriangles.sortTriangles(listTriangles);;
         IOStreamer.printToConsole(listTriangles);
     }
+
+    /**
+     *
+     */
     public static void printHelp(){
         System.out.print("============Помощь============\n  Программа считывает список треугольников и выдаёт их площади по возрастанию. " +
                 "В качестве параметров подаётся имя входного файла и результирующего файла. " +

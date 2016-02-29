@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Roman on 11.02.2016.
@@ -20,15 +18,36 @@ public class ParserTests {
     @Before
     public void setUp() throws Exception{
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
-        WorkWithTriangles.sortTriangles(parser.getListTriangles()); //сортирует список
-        //Есть список, взятый из тестового файла. Он не отсортированый. Ты его сортируешь. И сравниваешь с контрольным списком треугольников. Этот список задан вручную и в нем уже сортированые треугольники.
     }
 
     @Test
     public void TestGetSumTr() {
         int ex = 5;
-        Assert.assertSame("Не равны", ex, parser.getAmountTriangles());
+        Assert.assertSame("Not equal", ex, parser.getAmountTriangles());
 
+    }
+    @Test
+    public void testCalculateTriangles() throws Exception {
+        Assert.assertFalse("Wrong list triangles", isListTrianglesNotCorrect());
+    }
+    public boolean isListTrianglesNotCorrect() throws Exception {
+        List<Triangle> ex = new ArrayList<>();
+        ex.add(new Triangle(5, 10, 9));
+        ex.add(new Triangle(45, 25, 34));
+        ex.add(new Triangle(5, 4, 7));
+        ex.add(new Triangle(4, 8, 5));
+        ex.add(new Triangle(8, 6, 4));
+
+        boolean check = true;
+        for(int i = 0; i < 5; i++) {
+            ex.get(i).getSquare();
+            if (parser.getListTriangles().get(i).getSquare().equals(ex.get(i).getSquare())) {
+                check = false;
+            } else {
+                check = true;
+            }
+        }
+        return check;
     }
 
 }

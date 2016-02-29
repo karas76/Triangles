@@ -8,21 +8,24 @@ import java.util.List;
 /**
  * Created by Roman on 28.02.2016.
  */
-public class testWorkWithTriangles {
+public class WorkWithTrianglesTest {
     Parser parser;
 
     @Before
     public void setUp() throws Exception {
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
-        WorkWithTriangles.sortTriangles(parser.getListTriangles());
-
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     @Test
     public void testSortTriangles() throws Exception {
         Assert.assertFalse("Sort is not correct", isSortTrianglesNotEqual());
     }
     public boolean isSortTrianglesNotEqual() throws Exception {
+        WorkWithTriangles.sortTriangles(parser.getListTriangles());
         List<Triangle> ex = new ArrayList<>();
         ex.add(new Triangle(4, 8, 5));
         ex.add(new Triangle(5, 4, 7));
@@ -41,5 +44,5 @@ public class testWorkWithTriangles {
         }
         return check;
     }
-
 }
+

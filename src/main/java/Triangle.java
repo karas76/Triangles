@@ -1,7 +1,9 @@
 import util.IncorrectTriangleException;
 
 public class Triangle {
-
+    /**
+     * Геттеры.
+     */
     public double getFirstSide() {
         return firstSide;
     }
@@ -27,12 +29,27 @@ public class Triangle {
     private double perimeter;
     private double square;
 
+    /**
+     *
+     * @param firstSide
+     * @param secondSide
+     * @param thirdSide
+     * @throws Exception
+     */
     Triangle(double firstSide, double secondSide, double thirdSide) throws Exception{
         checkCorrect(firstSide, secondSide, thirdSide);
         fillTriangle(firstSide, secondSide, thirdSide);
         calculatePerimeter();
         calculateSquare();
     }
+
+    /**
+     *
+     * @param firstSide
+     * @param secondSide
+     * @param thirdSide
+     * @throws Exception
+     */
     private void checkCorrect(double firstSide, double secondSide, double thirdSide) throws Exception{
         if (secondSide + thirdSide <= firstSide)
             throw new IncorrectTriangleException();
