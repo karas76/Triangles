@@ -23,16 +23,7 @@ public class ParserTests {
         WorkWithTriangles.sortTriangles(parser.getListTriangles()); //сортирует список
         //Есть список, взятый из тестового файла. Он не отсортированый. Ты его сортируешь. И сравниваешь с контрольным списком треугольников. Этот список задан вручную и в нем уже сортированые треугольники.
     }
-    /*@Test
-    public void testRemovingExtraSpaces() throws Exception {
 
-        //Дальше добавляешь
-        Assert.assertFalse("More when one space founded!", islistTrianglesNotCorrect() );
-    }*/
-    /*@Test
-    public boolean islistTrianglesNotCorrect() throws Exception {
-
-    }*/
     @Test
     public void TestGetSumTr() {
         int ex = 5;
