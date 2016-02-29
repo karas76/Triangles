@@ -63,12 +63,6 @@ public class Parser {
         }
         return listTriangles;
     }
-    public void ex(){
-        for(Triangle tr : listTriangles ){
-            tr.getThirdSide();
-        }
-
-    }
     /**
      * Remove extra spaces
      * from source string

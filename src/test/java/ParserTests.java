@@ -22,31 +22,20 @@ public class ParserTests {
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
         WorkWithTriangles.sortTriangles(parser.getListTriangles()); //сортирует список
         //Есть список, взятый из тестового файла. Он не отсортированый. Ты его сортируешь. И сравниваешь с контрольным списком треугольников. Этот список задан вручную и в нем уже сортированые треугольники.
-        //parser.removeExtraSpaces();
     }
-    @Test
+    /*@Test
     public void testRemovingExtraSpaces() throws Exception {
-        List<Triangle> ex = new ArrayList<>();
-        ex.add(new Triangle(5, 4, 7));
-        ex.add(new Triangle(5, 10, 9));
-        ex.add(new Triangle(4, 8, 5));
-        ex.add(new Triangle(45, 25, 34));
-        ex.add(new Triangle(8, 6, 4));
 
         //Дальше добавляешь
-        Assert.assertFalse("More when one space founded!", listTrianglesNotCorrect(parser.getListTriangles(), ex));
-    }
-    @Test
-    public boolean listTrianglesNotCorrect(List<Triangle> list, List<Triangle> ex) {
-        if (list.equals(ex)) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+        Assert.assertFalse("More when one space founded!", islistTrianglesNotCorrect() );
+    }*/
+    /*@Test
+    public boolean islistTrianglesNotCorrect() throws Exception {
+
+    }*/
     @Test
     public void TestGetSumTr() {
-        int ex = 2;
+        int ex = 5;
         Assert.assertSame("Не равны", ex, parser.getAmountTriangles());
 
     }

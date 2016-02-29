@@ -14,6 +14,7 @@ public class testWorkWithTriangles {
     @Before
     public void setUp() throws Exception {
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
+        WorkWithTriangles.sortTriangles(parser.getListTriangles());
 
     }
 
@@ -23,21 +24,22 @@ public class testWorkWithTriangles {
     }
     public boolean isSortTrianglesNotEqual() throws Exception {
         List<Triangle> ex = new ArrayList<>();
-        ex.add(new Triangle(5, 4, 7));
         ex.add(new Triangle(4, 8, 5));
+        ex.add(new Triangle(5, 4, 7));
         ex.add(new Triangle(8, 6, 4));
         ex.add(new Triangle(5, 10, 9));
         ex.add(new Triangle(45, 25, 34));
+
         boolean check = true;
         for(int i = 0; i < 5; i++) {
-            if (parser.getListTriangles().get(i).equals(ex.get(i))) {
+            ex.get(i).getSquare();
+            if (parser.getListTriangles().get(i).getSquare().equals(ex.get(i).getSquare())) {
                 check = false;
             } else {
                 check = true;
             }
         }
         return check;
-        //Assert.assertSame("Не равны", ex.get(0).getSquare(), parser.getListTriangles().get(0).getSquare());
     }
 
 }
