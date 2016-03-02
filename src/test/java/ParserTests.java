@@ -5,29 +5,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Описание класса: тест для класса Parser
- * @author Карасев Роман.
- * Группа: ИВТ-42БО.
+ * РћРїРёСЃР°РЅРёРµ РєР»Р°СЃСЃР°: С‚РµСЃС‚ РґР»СЏ РєР»Р°СЃСЃР° Parser
+ * @author РљР°СЂР°СЃРµРІ Р РѕРјР°РЅ.
+ * Р“СЂСѓРїРїР°: РР’Рў-42Р‘Рћ.
  */
 
 public class ParserTests {
-    /** Объект парсер*/
+    /** РћР±СЉРµРєС‚ РїР°СЂСЃРµСЂ*/
     Parser parser;
 
-    /** Настройки тестов*/
+    /** РќР°СЃС‚СЂРѕР№РєРё С‚РµСЃС‚РѕРІ*/
     @Before
     public void setUp() throws Exception{
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
     }
 
-    /** Тест получения количества треугольников*/
+    /** РўРµСЃС‚ РїРѕР»СѓС‡РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ*/
     @Test
     public void TestGetSumTr() {
         int ex = 5;
         Assert.assertSame("Not equal", ex, parser.getAmountTriangles());
 
     }
-    /** Тест получения списка треугольников*/
+    /** РўРµСЃС‚ РїРѕР»СѓС‡РµРЅРёСЏ СЃРїРёСЃРєР° С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ*/
     @Test
     public void testCalculateTriangles() throws Exception {
         Assert.assertFalse("Wrong list triangles", isListTrianglesNotCorrect());
