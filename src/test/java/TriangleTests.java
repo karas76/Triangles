@@ -3,29 +3,29 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Описание класса: Тест для класса Triangle
- * @author Карасев Роман.
- * Группа: ИВТ-42БО.
+ * РћРїРёСЃР°РЅРёРµ РєР»Р°СЃСЃР°: РўРµСЃС‚ РґР»СЏ РєР»Р°СЃСЃР° Triangle
+ * @author РљР°СЂР°СЃРµРІ Р РѕРјР°РЅ.
+ * Р“СЂСѓРїРїР°: РР’Рў-42Р‘Рћ.
  */
 
 public class TriangleTests {
-    /** Объект треугольник*/
+    /** РћР±СЉРµРєС‚ С‚СЂРµСѓРіРѕР»СЊРЅРёРє*/
     Triangle triangle;
 
-    /** Настройки тестов*/
+    /** РќР°СЃС‚СЂРѕР№РєРё С‚РµСЃС‚РѕРІ*/
     @Before
     public void SetUp() throws Exception{
         triangle = new Triangle(3, 4, 5);
     }
 
-    /** Тест подсчёта периметра*/
+    /** РўРµСЃС‚ РїРѕРґСЃС‡С‘С‚Р° РїРµСЂРёРјРµС‚СЂР°*/
     @Test
     public void testCalculatePerimeter() {
         double ex = 12.0;
         Assert.assertEquals("Incorrect perimeter", ex, triangle.getPerimeter(), 0.001);
     }
 
-    /** Тест подсчёта площади*/
+    /** РўРµСЃС‚ РїРѕРґСЃС‡С‘С‚Р° РїР»РѕС‰Р°РґРё*/
     @Test
     public void testCalculateSquare() {
         double ex = 6.0;
