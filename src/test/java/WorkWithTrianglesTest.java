@@ -4,11 +4,13 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Описание класса: Тест класса WorkWithTriangles
  * @author Карасев Роман.
  * Группа: ИВТ-42БО.
 */
+
 public class WorkWithTrianglesTest {
     /**Объект парсер*/
     Parser parser;

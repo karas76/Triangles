@@ -10,6 +10,7 @@ import java.util.List;
  * @author Карасев Роман.
  * Группа: ИВТ-42БО.
  */
+
 public class TriangleTests {
     /** Объект треугольник*/
     Triangle triangle;

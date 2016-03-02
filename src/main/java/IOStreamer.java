@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+
 /**
  * Описание класса: Работает со строками из файла.
  *                  Записывает информацию о треугольниках в файл или консоль.
