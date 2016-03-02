@@ -5,22 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Описание класса: Тест класса WorkWithTriangles
- * @author Карасев Роман.
- * Группа: ИВТ-42БО.
+ * РћРїРёСЃР°РЅРёРµ РєР»Р°СЃСЃР°: РўРµСЃС‚ РєР»Р°СЃСЃР° WorkWithTriangles
+ * @author РљР°СЂР°СЃРµРІ Р РѕРјР°РЅ.
+ * Р“СЂСѓРїРїР°: РР’Рў-42Р‘Рћ.
 */
 
 public class WorkWithTrianglesTest {
-    /**Объект парсер*/
+    /**РћР±СЉРµРєС‚ РїР°СЂСЃРµСЂ*/
     Parser parser;
-    /** Настройки тестов*/
+    /** РќР°СЃС‚СЂРѕР№РєРё С‚РµСЃС‚РѕРІ*/
     @Before
     public void setUp() throws Exception {
         parser = new Parser(IOStreamer.inFile("src\\\\test\\\\java\\\\testInput.txt"));
     }
 
     /**
-     * Тест сортировки треугольников по площади
+     * РўРµСЃС‚ СЃРѕСЂС‚РёСЂРѕРІРєРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ РїРѕ РїР»РѕС‰Р°РґРё
      * @throws Exception
      */
     @Test
